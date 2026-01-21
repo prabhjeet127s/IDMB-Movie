@@ -2,12 +2,12 @@ import React, { useEffect, useState } from 'react'
 
 import { useParams } from 'react-router-dom'
 import axios from 'axios';
-import { useNavigate} from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 
 
 const Moviedetail = () => {
-  const navigate=useNavigate();
+  const navigate = useNavigate();
 
 
   type MovieDetail = {
@@ -16,13 +16,12 @@ const Moviedetail = () => {
     Poster: string;
     Plot: string;
     Genre: string;
+    Actors: string;
+    Rated: string;
+    Released: string;
+    Writer: string;
     imdbRating: string;
-    Actors: String;
-    Rated: String;
-    Released: String;
-    Writer: String;
-    imdbRating: String;
-    Director: String;
+    Director: string;
 
 
   };
@@ -77,15 +76,15 @@ const Moviedetail = () => {
         </div>
 
         <div className='h-auto'>
-          <h2 className='text-5xl p-7 pb-20' >{movie?.Title}</h2>
-          <ul className=' flex flex-col  gap-9  text-2xl  text-white bg-rose-600 h-auto w-5xl ' >
-            <li className='hover:bg-amber-200  transform  transition delay-150 pt-2' > Genre:{movie?.Genre}</li>
-            <li className='hover:bg-amber-200  transform  transition delay-150 pt-1' >   Rated:  {movie?.Rated}</li>
-            <li className='hover:bg-amber-200  transform  transition delay-150 pt-1' > Released  {movie?.Released}</li>
-            <li className='hover:bg-amber-200  transform  transition delay-150 pt-1' > IMDB Rating:   {movie?.imdbRating}</li>
-            <li className='hover:bg-amber-200  transform  transition delay-150 pt-1' > Director : {movie?.Director}</li>
-            <li className='hover:bg-amber-200  transform  transition delay-150 pt-1' > Writer:  {movie?.Writer}</li>
-            <li className='hover:bg-amber-200  transform  transition delay-150 pb-2 h-auto ' > Actors  {movie?.Actors}</li>
+          <h2 className='text-5xl p-7  pb-20' >{movie?.Title}</h2>
+          <ul className=' flex flex-col p-4 pl-8 gap-2.5 text-2xl  text-white bg-rose-600 h-auto w-5xl ' >
+            <li className='  p-4 w-full  hover:bg-amber-200  transform  transition delay-150 ' > Genre:{movie?.Genre}</li>
+            <li className='  p-4    hover:bg-amber-200  transform  transition delay-150 ' >   Rated:  {movie?.Rated}</li>
+            <li className=' p-4 w-full  hover:bg-amber-200  transform  transition delay-150 ' > Released  {movie?.Released}</li>
+            <li className=' p-4 w-full  hover:bg-amber-200  transform  transition delay-150 ' > IMDB Rating:   {movie?.imdbRating}</li>
+            <li className=' p-4 w-full  hover:bg-amber-200  transform  transition delay-150 ' > Director : {movie?.Director}</li>
+            <li className=' p-4 w-full  hover:bg-amber-200  transform  transition delay-150 ' > Writer:  {movie?.Writer}</li>
+            <li className=' p-4 w-full  hover:bg-amber-200  transform  transition delay-150  h-auto ' > Actors  {movie?.Actors}</li>
 
           </ul>
         </div>
@@ -99,7 +98,7 @@ const Moviedetail = () => {
         </div>
         <div className=' m-3'>
           <button className=' mr-3.5 p-2   rounded-2xl  border-white border-2 text-rose-600' >View IDMB</button>
-          <button onClick={()=>navigate("/")}  className=' ml-3.5  hover:bg-rose-400   transform  transition delay-150 p-2 rounded-2xl border-white border-2 text-rose-600' >Go Back to search</button>
+          <button onClick={() => navigate("/")} className=' ml-3.5  hover:bg-rose-400   transform  transition delay-150 p-2 rounded-2xl border-white border-2 text-rose-600' >Go Back to search</button>
         </div>
 
 

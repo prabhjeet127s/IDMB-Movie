@@ -7,16 +7,22 @@ import { useNavigate } from 'react-router-dom';
 
 
 
-
 const Home = () => {
-    const navigate=useNavigate();
+    const navigate = useNavigate();
+
+    type IMovie = {
+        Title: string;
+        Year: string;
+        Poster: string;
+        imdbID: string;
+    };
+
+
+
 
 
     const API = "fdbe6157";
-    type IMovie = {
 
-        movie:unknown[]
-    };
     const [movie, setmovie] = useState<IMovie[]>([])
     const [search, setsearch] = useState("")
 
@@ -64,7 +70,7 @@ const Home = () => {
             <div className='bg-sky-200 min-h-screen  h-auto  '          >
 
                 <div className='flex-col  justify-center  h-auto  '   >{/*Upper*/}
-                    <h3 className='text-center text-3xl  font-semibold p-6'  >IDMB MOVIES</h3>
+                    <h3 className='text-center text-3xl  font-semibold p-6'  >IDMB MOVIEffffS</h3>
                     <div className='flex p-4  w-full justify-center items-center  h-full  ' >
 
                         <input type="text" className='border-4  p-6  w-7xl  bg-amber-900  rounded-3xl h-10  border-blue-500 bg-white   '
@@ -75,19 +81,19 @@ const Home = () => {
                 </div>
 
 
-                <div    className='   flex flex-wrap  justify-center items-center '>{/*down*/}
+                <div className='   flex flex-wrap  justify-center items-center '>{/*down*/}
 
                     {movie.length === 0 ? (<h2>Search Your Favourite Movie</h2>) :
                         (movie.map((e) => (
 
-                            <div  onClick={()=>navigate(`/movie/${e.imdbID}`)}
-                            className=' p-5   max-[400px]: overflow-hidden max-w-[300px ]    ' >
+                            <div onClick={() => navigate(`/movie/${e.imdbID}`)}
+                                className=' p-5   max-[400px]: overflow-hidden max-w-[300px ]    ' >
                                 <img src={e.Poster} alt="hello" />
                             </div>
                         ))
                         )
                     }
-s
+                    s
                 </div>
 
             </div>
