@@ -6,6 +6,7 @@ import { Heart } from 'lucide-react';
 
 import { useNavigate } from 'react-router-dom';
 import Favourite from './Favourite';
+import { heart } from '../assets';
 
 
 
@@ -124,7 +125,7 @@ const Home = () => {
                             <div className=' p-5 position relative h-120 bg-fixed bg-cover  overflow-hidden max-w-[300px ]'>
                                 <div className='position absolute  top-7 left-60  '  >
                                     <button onClick={() => { clickfav(e) }}>
-                                        {favmovie.some((item: IMovie) => item.Title == e.Title) ? (<Heart className='size-8 text-white overflow-hidden bg-red-600   ' />) : <Heart className=' text-white  size-8 overflow-hidden   ' />}
+                                        {favmovie.some((item: IMovie) => item.Title == e.Title) ? (<img src={heart} className='size-8 text-white overflow-hidden w-8  h-8  ' />) : <Heart className=' text-white  size-8 overflow-hidden   ' />}
                                     </button>
                                 </div>
                                 <img onClick={() => navigate(`/movie/${e.imdbID}`)} src={e.Poster} alt="hello" />
