@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import  { useEffect, useState } from 'react'
 
 import { useParams } from 'react-router-dom'
 import axios from 'axios';
@@ -71,7 +71,7 @@ const Moviedetail = () => {
 
       <div className='h-auto flex justify-between px-40  p-7 items-center  pt-5 '    >  {/*upper*/}
         <div className='   mt-36  ' >{/*image*/}
-          <img className='w-[430px] h-160 ' src={movie?.Poster} alt="" />
+          <img className=' h-160 ' src={movie?.Poster} alt="" />
 
         </div>
 

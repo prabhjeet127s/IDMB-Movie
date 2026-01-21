@@ -1,4 +1,3 @@
-import React from 'react'
 import { useEffect } from 'react';
 import axios from 'axios';
 import { useState } from 'react';
@@ -103,7 +102,7 @@ const Home = () => {
                     <h3 className='text-center text-3xl  font-semibold p-6'  >IDMB MOVIE</h3>
                     <div className='flex p-4  w-full justify-center items-center  h-full  ' >
 
-                        <input type="text" className='border-4  p-6  w-7xl  bg-amber-900  rounded-3xl h-10  border-blue-500 bg-white   '
+                        <input type="text" className='border-4  p-6  w-7xl  bg-amber-900  rounded-3xl h-10  border-blue-500  '
                             onChange={(e) => setsearch(e.target.value)} />
                     </div>
                     <div className='flex p-7 gap-4 justify-center  ' >
@@ -125,7 +124,7 @@ const Home = () => {
                             <div className=' p-5 position relative h-120 bg-fixed bg-cover  overflow-hidden max-w-[300px ]'>
                                 <div className='position absolute  top-7 left-60  '  >
                                     <button onClick={() => { clickfav(e) }}>
-                                        {favmovie.some((item: IMovie) => item.Title == e.Title) ? (<Heart className='size-8 text-white overflow-hidden bg-red-600  hover: size-14 ' />) : <Heart className=' text-white  size-8 overflow-hidden   hover: size-14' />}
+                                        {favmovie.some((item: IMovie) => item.Title == e.Title) ? (<Heart className='size-8 text-white overflow-hidden bg-red-600   ' />) : <Heart className=' text-white  size-8 overflow-hidden   ' />}
                                     </button>
                                 </div>
                                 <img onClick={() => navigate(`/movie/${e.imdbID}`)} src={e.Poster} alt="hello" />
