@@ -1,13 +1,13 @@
-import  { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 
 import { useParams } from 'react-router-dom'
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate} from 'react-router-dom';
 
 
 
 const Moviedetail = () => {
-  const navigate = useNavigate();
+  const navigate=useNavigate();
 
 
   type MovieDetail = {
@@ -69,7 +69,7 @@ const Moviedetail = () => {
 
 
 
-      <div className='h-auto flex justify-between px-40  p-7 items-center  pt-5 '    >  {/*upper*/}
+      <div className='h-auto flex justify-between px-40 gap-5  p-7 items-center  pt-5 '    >  {/*upper*/}
         <div className='   mt-36  ' >{/*image*/}
           <img className=' h-160 ' src={movie?.Poster} alt="" />
 
@@ -98,7 +98,7 @@ const Moviedetail = () => {
         </div>
         <div className=' m-3'>
           <button className=' mr-3.5 p-2   rounded-2xl  border-white border-2 text-rose-600' >View IDMB</button>
-          <button onClick={() => navigate("/")} className=' ml-3.5  hover:bg-rose-400   transform  transition delay-150 p-2 rounded-2xl border-white border-2 text-rose-600' >Go Back to search</button>
+          <button onClick={()=>navigate("/")}  className=' ml-3.5  hover:bg-rose-400   transform  transition delay-150 p-2 rounded-2xl border-white border-2 text-rose-600' >Go Back to search</button>
         </div>
 
 
