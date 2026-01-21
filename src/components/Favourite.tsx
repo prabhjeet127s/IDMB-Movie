@@ -2,23 +2,23 @@ import React from 'react'
 import { useNavigate } from 'react-router-dom';
 
 
-interface IMovie {
-favmovie:[
-    {
-  Title: string
-  Year: string
-  Poster: string
-  imdbID: string
-    }
-]
-  
+interface Movie {
+  Title: string;
+  Year: string;
+  Poster: string;
+  imdbID: string;
+}
+
+interface Props {
+  favmovie: Movie[];
 }
 
 
 
-const Favourite = ({favmovie}:IMovie) => {
 
-    console.log(favmovie  +"fa=ffffffffff")
+const Favourite = ({favmovie}:Props) => {
+
+
     const navigate=useNavigate();
 
     
