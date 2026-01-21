@@ -102,7 +102,7 @@ const Home = () => {
                     <h3 className='text-center text-3xl  font-semibold p-6'  >IDMB MOVIE</h3>
                     <div className='flex p-4  w-full justify-center items-center  h-full  ' >
 
-                        <input type="text" className='border-4  p-6  w-7xl  bg-amber-900  rounded-3xl h-10  border-blue-500  '
+                        <input type="text" className='border-4  p-6  w-7xl  bg-white  rounded-3xl h-10  border-blue-500  '
                             onChange={(e) => setsearch(e.target.value)} />
                     </div>
                     <div className='flex p-7 gap-4 justify-center  ' >
